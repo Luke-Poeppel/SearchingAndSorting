@@ -1,7 +1,6 @@
 '''
 Binary Search Algorithm with sorted-verification helper function.
 '''
-
 def check_if_sorted(lst):
 	'''
 	Uses recursion to check if a an input list is sorted
@@ -22,28 +21,30 @@ def check_if_sorted(lst):
 		remainder = check_if_sorted(lst[1:])
 		return (lst[0] <= lst[1] and remainder)
 
-def iterative_binary_search(std_lst, search_val):
+def iterative_binary_search(lst, search_val):
 	'''
 	Iterative Binary Search Algorithm.
-	Requires a sorted list as input.
 
 	>>> l3 = [2, 4, 6, 8, 10, 12, 14, 16, 18]
 	>>> print(iterative_binary_search(l3, 12))
 	True
 	'''
 	first = 0
-	last  = (len(std_lst) - 1)
+	last  = (len(lst) - 1)
 	found = False
 
-	while (first <= last and not found):
-		midpoint = (first + last) // 2
-		if (std_lst[midpoint] == search_val):
-			found = True
-		else:
-			if (std_lst[midpoint] > search_val):
-				last = (midpoint - 1)
+	if check_if_sorted(lst) == True:
+		while (first <= last and not found):
+			midpoint = (first + last) // 2
+			if (lst[midpoint] == search_val):
+				found = True
 			else:
-				first = (midpoint + 1)
+				if (lst[midpoint] > search_val):
+					last = (midpoint - 1)
+				else:
+					first = (midpoint + 1)
+	else:
+		raise Exception("Input list to a binary search must be sorted!")
 
 	return found
 
