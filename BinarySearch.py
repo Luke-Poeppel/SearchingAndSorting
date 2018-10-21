@@ -28,11 +28,9 @@ def iterative_binary_search(std_lst, search_val):
 	Requires a sorted list as input.
 
 	>>> l3 = [2, 4, 6, 8, 10, 12, 14, 16, 18]
-	>>> print(iterative_binary_search(l, 12))
+	>>> print(iterative_binary_search(l3, 12))
 	True
 	'''
-	std 
-
 	first = 0
 	last  = (len(std_lst) - 1)
 	found = False
@@ -49,7 +47,6 @@ def iterative_binary_search(std_lst, search_val):
 
 	return found
 
-def main(lst):
-	iterative_binary_search(lst)
-
-
+if __name__ == '__main__':
+	import doctest
+	doctest.testmod()
