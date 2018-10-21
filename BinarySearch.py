@@ -13,7 +13,7 @@ def check_if_sorted(lst):
 	True
 	'''
 	if (type(lst) != list):
-		raise Exception("Input must be a sorted list and search value.")
+		raise Exception("Input must be a list!")
 
 	if (len(lst) == 1):
 		return True
