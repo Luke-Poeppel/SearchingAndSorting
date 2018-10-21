@@ -1,5 +1,5 @@
 '''
-Binary Search Algorithm with sorted-verification helper function.
+Binary Search Algorithm with helper function to check that the list provided is sorted.
 '''
 def check_if_sorted(lst):
 	'''
