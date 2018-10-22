@@ -3,7 +3,7 @@ Binary Search Algorithm with helper function to check that the list provided is 
 '''
 def check_if_sorted(lst):
 	'''
-	Uses recursion to check if a an input list is sorted
+	Uses recursion to check if an input list is sorted
 
 	>>> l1 = [1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 7, 9]
 	>>> l2 = [100, 101, 102, 103, 104, 105, 106, 107, 108]
