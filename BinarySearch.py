@@ -48,6 +48,26 @@ def iterative_binary_search(lst, search_val):
 
 	return found
 
+def recursive_binary_search(std_lst, search_val):
+	'''
+	Recursive implementation of Binary Search Algorithm
+
+	>>> l4 = [30, 33, 36, 39, 42, 45, 48, 51]
+	>>> print(recursive_binary_search(l4, 48))
+	True
+	'''
+	if len(std_lst) == 1:
+		return True
+	else:
+		midpoint = len(std_lst) // 2
+		if std_lst[midpoint] == search_val:
+			return True
+		else:
+			if std_lst[midpoint] > search_val:
+				return recursive_binary_search(std_lst[:midpoint], search_val)
+			else:
+				return recursive_binary_search(std_lst[(midpoint + 1):], search_val)
+
 if __name__ == '__main__':
 	import doctest
 	doctest.testmod()
