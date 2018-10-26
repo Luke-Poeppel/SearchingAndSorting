@@ -1,6 +1,6 @@
 class ArrayQueue(object):
 	'''
-	Implementation of Queue ADT (FIFO).
+	Implementation of the Queue ADT (FIFO).
 
 	>>> q = ArrayQueue()
 	>>> q.enqueue(10)
