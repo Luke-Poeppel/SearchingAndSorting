@@ -1,3 +1,3 @@
 # SearchingAndSorting
 
-Searching and Sorting Algorithms implemented for Data Structures and Algorithms at NYU.
+Searching/Sorting Algorithms and Abstract Data Type (ADT) experiments implemented for Data Structures and Algorithms at NYU.
