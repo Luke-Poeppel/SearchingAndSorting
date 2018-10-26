@@ -1,7 +1,5 @@
 class ArrayStack(object):
 	'''
-	Test for Github Desktop
-
 	Implementation of the Stack ADT.
 	>>> s = ArrayStack()
 	>>> for i in range(1, 4):
