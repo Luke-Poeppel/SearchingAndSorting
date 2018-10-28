@@ -1,6 +1,7 @@
 class ArrayStack(object):
 	'''
 	Implementation of the Stack ADT.
+	
 	>>> s = ArrayStack()
 	>>> for i in range(1, 4):
 	...     s.push(i)
