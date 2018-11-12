@@ -7,6 +7,8 @@ class ArrayStack(object):
 	...     s.push(i)
 	>>> s.data
 	[1, 2, 3]
+	>>> s.top()
+	3
 	>>> s.pop()
 	3
 	>>> s.pop()
