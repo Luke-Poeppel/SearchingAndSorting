@@ -3,8 +3,12 @@ class ArrayQueue(object):
 	Implementation of the Queue ADT (FIFO).
 
 	>>> q = ArrayQueue()
+	>>> q.data
+	[None, None, None]
 	>>> q.enqueue(10)
 	>>> q.enqueue(11)
+	>>> q.data
+	[10, 11, None]
 	>>> q.enqueue(12)
 	>>> q.data
 	[10, 11, 12]
@@ -12,8 +16,6 @@ class ArrayQueue(object):
 	10
 	>>> q.first()
 	11
-	>>> q.__len__()
-	2
 	'''
 	INITIAL_CAPACITY = 3
 
