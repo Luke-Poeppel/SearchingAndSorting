@@ -2,19 +2,30 @@
 Linked Binary Tree
 '''
 
-from Queue import *
+from Queue import ArrayQueue
 	
 class LinkedBinaryTree(object):
 	'''
 	Linked Binary Tree Object.
 
-	node1 = LinkedBinaryTree.Node(1)
-	node2 = LinkedBinaryTree.Node(2)
-	node3 = LinkedBinaryTree.Node(3, left = node1, right = node2)
-	node4 = LinkedBinaryTree.Node(4)
-	node5 = LinkedBinaryTree.Node(5)
-	node6 = LinkedBinaryTree.Node(6, left = node4, right = node5)
-	rt = LinkedBinaryTree.Node(10, left = node3, right = node6)
+	>>> node1 = LinkedBinaryTree.Node(1)
+	>>> node2 = LinkedBinaryTree.Node(2)
+	>>> node3 = LinkedBinaryTree.Node(3, left = node1, right = node2)
+	>>> node4 = LinkedBinaryTree.Node(4)
+	>>> node5 = LinkedBinaryTree.Node(5)
+	>>> node6 = LinkedBinaryTree.Node(6, left = node4, right = node5)
+	>>> rt = LinkedBinaryTree.Node(10, left = node3, right = node6)
+
+	>>> lbt = LinkedBinaryTree(rt)
+	>>> for thisValue in lbt.inorder():
+	...	    print(thisValue.data)
+	1
+	3
+	2
+	10
+	4
+	6
+	5
 	'''
 	class Node(object):
 		'''
@@ -137,7 +148,7 @@ class LinkedBinaryTree(object):
 	def breadth_first(self):
 		if self.is_empty():
 			return
-		line = Queue.ArrayQueue()
+		line = ArrayQueue()
 		line.enqueue(self.root)
 
 		while (line.is_empty() == False):
@@ -162,5 +173,3 @@ class LinkedBinaryTree(object):
 if __name__ == '__main__':
 	import doctest
 	doctest.testmod()
-
-
