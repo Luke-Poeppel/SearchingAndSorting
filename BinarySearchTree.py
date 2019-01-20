@@ -35,8 +35,8 @@ class BinarySearchTreeMap(object):
 			self.left = None
 			self.right = None
 
-	def __init__(self):
-		self.root = None
+	def __init__(self, root = None):
+		self.root = root
 		self.size = 0
 
 	def __len__(self):
@@ -188,3 +188,34 @@ class BinarySearchTreeMap(object):
 		for node in self.inorder():
 			yield node.item.key
 
+item1 = BinarySearchTreeMap.Item(key = 1, value = 45)
+item2 = BinarySearchTreeMap.Item(key = 2, value = 30)
+item3 = BinarySearchTreeMap.Item(key = 3, value = 60)
+item4 = BinarySearchTreeMap.Item(key = 4, value = 100)
+item5 = BinarySearchTreeMap.Item(key = 5, value = 30)
+item6 = BinarySearchTreeMap.Item(key = 6, value = 25)
+item7 = BinarySearchTreeMap.Item(key = 7, value = 51)
+
+n1 = BinarySearchTreeMap.Node(item1)
+n2 = BinarySearchTreeMap.Node(item2)
+n3 = BinarySearchTreeMap.Node(item3)
+n3.left = n1, 
+n3.right = n2
+
+n5 = BinarySearchTreeMap.Node(item5)
+n7 = BinarySearchTreeMap.Node(item7)
+n6 = BinarySearchTreeMap.Node(item6)
+n6.left = n5
+n6.right = n7
+
+rt = BinarySearchTreeMap.Node(item4)
+rt.left = n3
+rt.right = n6
+
+lbt = BinarySearchTreeMap(rt)
+
+print(lbt.find(4).item.value)
+
+if __name__ == '__main__':
+	import doctest
+	doctest.testmod()
